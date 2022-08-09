@@ -5,47 +5,19 @@ import { compareAges, compareNames, getAge } from './Utils';
 const people = require('./data.json');
 
 function App() {
-	const [sortedPeople, setSortedPeople] = useState(undefined);
+	const [sortedPeople, setSortedPeople] = useState(people);
 	const [sortBy, setSortBy] = useState(undefined);
 
-	/* const getAge = (birthday) => {
-		const birthdayFormatted = new Date(birthday);
-		const today = new Date();
-		const yearsSinceBirth = differenceInYears(today, birthdayFormatted);
-		return yearsSinceBirth;
-	}; */
-
-	/* 	function compareNames(a, b) {
-		const personA = a.firstName.toUpperCase().concat(a.lastName.toUpperCase());
-		const personB = b.firstName.toUpperCase().concat(b.lastName.toUpperCase());
-
-		if (personA < personB) return -1;
-		if (personA > personB) return 1;
-		return 0;
-	}
-
-	function compareAges(a, b) {
-		const personA = getAge(a.birthday);
-		const personB = getAge(b.birthday);
-
-		return personA - personB;
-	} */
-
-	useEffect(() => {
-		if (sortBy === undefined) setSortedPeople(people);
-
-		if (sortBy === 'name') {
-			console.log(`Sort by: name!`);
+	const handleSortByChange = (value) => {
+		setSortBy(value);
+		if (value === 'name') {
 			const sorted = people.sort(compareNames);
 			setSortedPeople(sorted);
-		}
-
-		if (sortBy === 'age') {
-			console.log(`Sort by: age!`);
+		} else {
 			const sorted = people.sort(compareAges);
 			setSortedPeople(sorted);
 		}
-	}, [sortBy, sortedPeople]);
+	};
 
 	return (
 		<div className="mx-auto max-w-xl">
@@ -53,7 +25,7 @@ function App() {
 				<h1 className="text-3xl font-bold mt-16">Birthdays</h1>
 			</header>
 			<main>
-				<form onChange={(event) => setSortBy(event.target.value)}>
+				<form onChange={(event) => handleSortByChange(event.target.value)}>
 					<legend>Select wether to sort on name or age</legend>
 					<div>
 						<input
