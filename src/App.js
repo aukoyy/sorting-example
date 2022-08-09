@@ -132,7 +132,7 @@ function App() {
 					</ul>
 				</form>
 
-				<table className="w-full mt-24">
+				{/* <table className="w-full mt-24">
 					<thead>
 						{displayFirst === 'name-first' ? (
 							<tr>
@@ -166,7 +166,63 @@ function App() {
 								);
 							})}
 					</tbody>
-				</table>
+				</table> */}
+
+				<div class="overflow-x-auto relative shadow-md sm:rounded-lg mt-16">
+					<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+						<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+							{displayFirst === 'name-first' ? (
+								<tr>
+									<th scope="col" class="py-3 px-6">
+										Name
+									</th>
+									<th scope="col" class="py-3 px-6">
+										Age
+									</th>
+								</tr>
+							) : (
+								<tr>
+									<th scope="col" class="py-3 px-6">
+										Age
+									</th>
+									<th scope="col" class="py-3 px-6">
+										Name
+									</th>
+								</tr>
+							)}
+						</thead>
+						<tbody>
+							{sortedPeople &&
+								sortedPeople.map((person) => {
+									return displayFirst === 'name-first' ? (
+										<tr
+											class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+											key={person.birthday}
+										>
+											<td class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+												{person.firstName} {person.lastName}
+											</td>
+											<td class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+												{getAge(person.birthday)}
+											</td>
+										</tr>
+									) : (
+										<tr
+											class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+											key={person.birthday}
+										>
+											<td class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+												{getAge(person.birthday)}
+											</td>
+											<td class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+												{person.firstName} {person.lastName}
+											</td>
+										</tr>
+									);
+								})}
+						</tbody>
+					</table>
+				</div>
 			</main>
 		</div>
 	);
