@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { compareAges, compareNames, getAge } from './Utils';
 
 const people = require('./data.json');
