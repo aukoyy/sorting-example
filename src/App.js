@@ -40,7 +40,7 @@ function App() {
 					Select whether to sort on name or age
 				</h3>
 				<ul
-					class="grid gap-6 w-full md:grid-cols-2 mt-4"
+					className="grid gap-6 w-full md:grid-cols-2 mt-4"
 					onChange={(event) => handleSortByChange(event.target.value)}
 				>
 					<li>
@@ -49,16 +49,18 @@ function App() {
 							id="name"
 							name="hosting"
 							value="name"
-							class="hidden peer"
+							className="hidden peer"
 							checked={sortBy === 'name'}
 						/>
 						<label
-							for="name"
-							class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+							htmlFor="name"
+							className="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
 						>
-							<div class="block">
-								<div class="w-full text-lg font-semibold">Name</div>
-								<div class="w-full">Sort the list by names alphabetically</div>
+							<div className="block">
+								<div className="w-full text-lg font-semibold">Name</div>
+								<div className="w-full">
+									Sort the list by names alphabetically
+								</div>
 							</div>
 						</label>
 					</li>
@@ -68,16 +70,18 @@ function App() {
 							id="age"
 							name="hosting"
 							value="age"
-							class="hidden peer"
+							className="hidden peer"
 							checked={sortBy === 'age'}
 						/>
 						<label
-							for="age"
-							class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+							htmlFor="age"
+							className="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
 						>
-							<div class="block">
-								<div class="w-full text-lg font-semibold">Age</div>
-								<div class="w-full">Sort the list from youngest to oldest</div>
+							<div className="block">
+								<div className="w-full text-lg font-semibold">Age</div>
+								<div className="w-full">
+									Sort the list from youngest to oldest
+								</div>
 							</div>
 						</label>
 					</li>
@@ -87,7 +91,7 @@ function App() {
 					Select what order you want the list to be displayed in
 				</h3>
 				<ul
-					class="grid gap-6 w-full md:grid-cols-2 mt-4"
+					className="grid gap-6 w-full md:grid-cols-2 mt-4"
 					onChange={(event) => handleDisplayFirstChange(event.target.value)}
 				>
 					<li>
@@ -96,15 +100,15 @@ function App() {
 							id="name-first"
 							name="hosting"
 							value="name-first"
-							class="hidden peer"
+							className="hidden peer"
 							checked={displayFirst === 'name-first'}
 						/>
 						<label
-							for="name-first"
-							class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+							htmlFor="name-first"
+							className="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
 						>
-							<div class="block">
-								<div class="w-full font-semibold">Name first</div>
+							<div className="block">
+								<div className="w-full font-semibold">Name first</div>
 							</div>
 						</label>
 					</li>
@@ -114,15 +118,15 @@ function App() {
 							id="age-first"
 							name="hosting"
 							value="age-first"
-							class="hidden peer"
+							className="hidden peer"
 							checked={displayFirst === 'age-first'}
 						/>
 						<label
-							for="age-first"
-							class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+							htmlFor="age-first"
+							className="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
 						>
-							<div class="block">
-								<div class="w-full font-semibold">Age first</div>
+							<div className="block">
+								<div className="w-full font-semibold">Age first</div>
 							</div>
 						</label>
 					</li>
