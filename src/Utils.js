@@ -7,18 +7,18 @@ export const getAge = (birthday) => {
 	return yearsSinceBirth;
 };
 
-export function compareNames(a, b) {
+export const compareNames = (a, b) => {
 	const personA = a.firstName.toUpperCase().concat(a.lastName.toUpperCase());
 	const personB = b.firstName.toUpperCase().concat(b.lastName.toUpperCase());
 
 	if (personA < personB) return -1;
 	if (personA > personB) return 1;
 	return 0;
-}
+};
 
-export function compareAges(a, b) {
+export const compareAges = (a, b) => {
 	const personA = getAge(a.birthday);
 	const personB = getAge(b.birthday);
 
 	return personA - personB;
-}
+};
