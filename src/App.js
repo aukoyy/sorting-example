@@ -153,7 +153,7 @@ function App() {
 										<tr>
 											<th
 												scope="col"
-												className="py-3 px-6"
+												className="py-3 px-6 cursor-pointer"
 												onClick={() => handleSortByChange('name')}
 											>
 												<div className="flex">
@@ -163,7 +163,7 @@ function App() {
 											</th>
 											<th
 												scope="col"
-												className="py-3 px-6"
+												className="py-3 px-6 cursor-pointer"
 												onClick={() => handleSortByChange('age')}
 											>
 												<div className="flex">
