@@ -21,7 +21,6 @@ function App() {
 	const [displayFirst, setDisplayFirst] = useState('name-first');
 
 	const handleSortByChange = (value) => {
-		console.log(value);
 		setSortBy(value);
 		if (value === 'name') {
 			const sorted = people.sort(compareNames);
@@ -33,7 +32,6 @@ function App() {
 	};
 
 	const handleDisplayFirstChange = (value) => {
-		console.log(value);
 		setDisplayFirst(value);
 		if (value === 'name-first') {
 			setDisplayFirst(value);
