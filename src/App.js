@@ -6,7 +6,7 @@ const people = require('./data.json');
 const SortIcon = () => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		class="ml-1 w-3 h-3 mt-0.5"
+		className="ml-1 w-3 h-3 mt-0.5"
 		aria-hidden="true"
 		fill="currentColor"
 		viewBox="0 0 320 512"

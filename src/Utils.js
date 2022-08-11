@@ -8,8 +8,8 @@ export const getAge = (birthday) => {
 };
 
 export const compareNames = (a, b) => {
-	const personA = a.firstName.toUpperCase().concat(a.lastName.toUpperCase());
-	const personB = b.firstName.toUpperCase().concat(b.lastName.toUpperCase());
+	const personA = a.firstName.concat(a.lastName).toUpperCase();
+	const personB = b.firstName.concat(b.lastName).toUpperCase();
 
 	if (personA < personB) return -1;
 	if (personA > personB) return 1;
